@@ -38,5 +38,5 @@ You could also `map` a shortcut key to a window size. Example:
     map <leader>1 :VSSelectWindowSize normal<CR>
     map <leader>2 :VSSelectWindowSize bigger<CR>
 
-To install this plugin simply copy the `Vimsizer.vim` into the `plugin`
-directory and `firesizer.txt` into the doc directory in your vim folder.
+To install this plugin simply copy the `vimsizer.vim` into the `plugin`
+directory and `vimsizer.txt` into the doc directory in your vim folder.
