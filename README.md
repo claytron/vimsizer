@@ -12,7 +12,7 @@ There are two default sizes that are defined with the
 
 You can define your own set of sizes. Example:
 
-    let g:window_sizes = {"miniscule": "25 10", "magiscule": "200 60"}
+    let vs_window_sizes = {"miniscule": "25 10", "magiscule": "200 60"}
 
 Once the window sizes have been defined then you can use the
 `VSSelectWindowSize` command to switch. Example:
