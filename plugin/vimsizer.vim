@@ -9,11 +9,11 @@
 "              Want To Public License, Version 2, as published by Sam Hocevar.
 "              See http://sam.zoy.org/wtfpl/COPYING for more details.
 "
-" GetLatestVimScripts: 3057 2 vimsizer
+" GetLatestVimScripts: 3057 3 vimsizer
 " ============================================================================
 
 " SECTION: Script init
-let s:vimsizer_version = '1.1'
+let s:vimsizer_version = '1.2'
 
 if exists("loaded_vimsizer")
     finish
