@@ -2,7 +2,7 @@
 
 ==============================================================================
 Author:  Clayton Parker <robots@claytron.com>                *vimsizer-author*
-License: Same terms as Vim itself (see |license|)
+License: http://sam.zoy.org/wtfpl/COPYING
 
 ==============================================================================
 INTRODUCTION                                                        *vimsizer*
