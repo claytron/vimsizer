@@ -9,14 +9,14 @@
 "              Want To Public License, Version 2, as published by Sam Hocevar.
 "              See http://sam.zoy.org/wtfpl/COPYING for more details.
 "
+" GetLatestVimScripts: ??? 1 vimsizer
 " ============================================================================
 
 " Section: TODO
 "   - Auto completion of sizes
 "   - Command to list sizes
-"   - Write docs
-"   - Push to github
 "   - Publish on vim.org
+"   - Update the GLVS ids
 
 " SECTION: Script init
 let s:vimsizer_version = '1.0'
@@ -27,12 +27,14 @@ endif
 let loaded_vimsizer = 1
 
 " SECTION: default values
-" A dictionary of available sizes, inspired by Firesizer
-let g:window_sizes = {"normal": '155 45', "bigger": '215 50'}
+" A dictionary of available sizes
+if !exists('g:vs_window_sizes')
+    let g:vs_window_sizes = {"normal": '150 40', "bigger": '210 50'}
+endif
 
 " SECTION: commands
-command! -n=1 WindowSize :call s:windowSize('<args>')
-command! -n=1 SelectWindowSize :call s:selectWindowSize('<args>')
+command! -n=1 VSWindowSize :call <SID>windowSize('<args>')
+command! -n=1 VSSelectWindowSize :call <SID>selectWindowSize('<args>')
 
 " SECTION: re-sizing functions
 " Set the window size to "columns lines"
@@ -47,10 +49,10 @@ endfunction
 " Set the window size to the given size named in g:window_sizes
 function! s:selectWindowSize(size_name)
     " TODO: throw an error if the size doesn't exist
-    if has_key(g:window_sizes, a:size_name)
-        call s:windowSize(g:window_sizes[a:size_name])
-        "echo "Window size set to ".g:window_sizes[a:size_name]
+    if has_key(g:vs_window_sizes, a:size_name)
+        call s:windowSize(g:vs_window_sizes[a:size_name])
+        "echo "Window size set to ".g:vs_window_sizes[a:size_name]
     else
-        "echo g:window_sizes
+        "echo vs_window_sizes
     endif
 endfunction
