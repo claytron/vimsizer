@@ -1,6 +1,7 @@
 # Vimsizer #
 
-Vimsizer is a simple plugin that was inspired by the [Firesizer]() extension
+Vimsizer is a simple plugin that was inspired by the
+[Firesizer](https://addons.mozilla.org/en-US/firefox/addon/5792) extension
 for Firefox. This plugin gives you the ability to define a re-usable set of
 window dimensions.
 
@@ -31,6 +32,11 @@ Example:
 
 This would set the window size to `normal` upon entering vim for the first
 time.
+
+You could also `map` a shortcut key to a window size. Example:
+
+    map <leader>1 :VSSelectWindowSize normal<CR>
+    map <leader>2 :VSSelectWindowSize bigger<CR>
 
 To install this plugin simply copy the `Vimsizer.vim` into the `plugin`
 directory and `firesizer.txt` into the doc directory in your vim folder.
