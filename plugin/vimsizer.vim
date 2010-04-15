@@ -12,12 +12,6 @@
 " GetLatestVimScripts: ??? 1 vimsizer
 " ============================================================================
 
-" Section: TODO
-"   - Auto completion of sizes
-"   - Command to list sizes
-"   - Publish on vim.org
-"   - Update the GLVS ids
-
 " SECTION: Script init
 let s:vimsizer_version = '1.0'
 

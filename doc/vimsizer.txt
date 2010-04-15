@@ -57,9 +57,13 @@ Vimsizer creates a few new commands for you to use. They are described here.
 
 :VSSelectWindowSize [size_name]                           *VSSelectWindowSize*
 
-    Select a pre-defined size from the list of |vs_window_sizes|
+    Select a pre-defined size from the list of |vs_window_sizes|. Hitting tab
+    will cycle through all the sizes defined.
 
 :VSWindowSize [columns] [lines]                                 *VSWindowSize*
 
     Quickly change the window size to the given |columns| and |lines|
 
+:VSShowWindowSizes                                         *VSShowWindowSizes*
+
+    Show a detailed listing of all the |vs_window_sizes| available.
