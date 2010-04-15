@@ -29,6 +29,14 @@ You can also quickly switch to any specific size you like with the
 
     :VSWindowSize 100 20
 
+You can use the |autogroup| command to set the window size on startup.
+Example: >
+
+    au VimEnter * exe 'VSSelectWindowSize normal'
+
+This would set the window size to `normal` upon entering vim for the first
+time.
+
 ------------------------------------------------------------------------------
 VIMSIZER SETTINGS                                           *VimsizerSettings*
 

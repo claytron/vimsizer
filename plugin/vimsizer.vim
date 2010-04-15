@@ -34,6 +34,7 @@ endif
 
 " SECTION: commands
 command! -n=1 VSWindowSize :call <SID>windowSize('<args>')
+command! -n=0 VSShowWindowSizes :call <SID>showWindowSizes()
 command! -n=1 -complete=customlist,s:completeSizes VSSelectWindowSize :call <SID>selectWindowSize('<args>')
 
 " SECTION: re-sizing functions
@@ -55,6 +56,16 @@ function! s:selectWindowSize(size_name)
     else
         "echo vs_window_sizes
     endif
+endfunction
+
+" print out a list of available window sizes
+function! s:showWindowSizes()
+    echo "size\tcolumns\trows"
+    for i in keys(g:vs_window_sizes)
+        let window_size = g:vs_window_sizes[i]
+        let dimensions = split(window_size)
+        echo i . "\t" . dimensions[0] . "\t" . dimensions[1]
+    endfor
 endfunction
 
 " completion function for size names
