@@ -34,7 +34,7 @@ endif
 
 " SECTION: commands
 command! -n=1 VSWindowSize :call <SID>windowSize('<args>')
-command! -n=1 VSSelectWindowSize :call <SID>selectWindowSize('<args>')
+command! -n=1 -complete=customlist,s:completeSizes VSSelectWindowSize :call <SID>selectWindowSize('<args>')
 
 " SECTION: re-sizing functions
 " Set the window size to "columns lines"
@@ -55,4 +55,9 @@ function! s:selectWindowSize(size_name)
     else
         "echo vs_window_sizes
     endif
+endfunction
+
+" completion function for size names
+function! s:completeSizes(A,L,P)
+    return filter(keys(g:vs_window_sizes), 'v:val =~ "^' . a:A . '"')
 endfunction
